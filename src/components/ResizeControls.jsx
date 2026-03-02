@@ -47,16 +47,17 @@ export default function ResizeControls({
             min={1}
             value={width}
             onChange={(e) => handleWidthChange(e.target.value)}
-            className="w-full bg-gray-800 border border-gray-600 rounded-lg px-3 py-2 text-gray-100 focus:outline-none focus:border-cyan-400"
+            className="w-full bg-gray-800/50 border border-gray-600 rounded-lg px-3 py-2 text-gray-100 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400/30 transition-all"
           />
         </label>
 
         <button
           onClick={onToggleAspectLock}
           title={aspectLocked ? 'Unlock aspect ratio' : 'Lock aspect ratio'}
-          className={`mb-1 p-2 rounded-lg border transition-colors ${
-            aspectLocked ? 'border-cyan-400 text-cyan-400 bg-cyan-400/10' : 'border-gray-600 text-gray-500'
-          }`}
+          className={`mb-1 p-2 rounded-lg border transition-all duration-200 ${aspectLocked
+              ? 'border-cyan-400 text-cyan-400 bg-cyan-400/10 shadow-lg shadow-cyan-400/10'
+              : 'border-gray-600 text-gray-500 hover:border-gray-400'
+            }`}
         >
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             {aspectLocked ? (
@@ -84,7 +85,7 @@ export default function ResizeControls({
             min={1}
             value={height}
             onChange={(e) => handleHeightChange(e.target.value)}
-            className="w-full bg-gray-800 border border-gray-600 rounded-lg px-3 py-2 text-gray-100 focus:outline-none focus:border-cyan-400"
+            className="w-full bg-gray-800/50 border border-gray-600 rounded-lg px-3 py-2 text-gray-100 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400/30 transition-all"
           />
         </label>
       </div>
@@ -96,7 +97,7 @@ export default function ResizeControls({
             <button
               key={opt.label}
               onClick={() => handleScale(opt.value)}
-              className="px-3 py-1.5 text-sm rounded-lg bg-gray-800 border border-gray-600 text-gray-300 hover:border-cyan-400 hover:text-cyan-400 transition-colors"
+              className="px-3 py-1.5 text-sm rounded-lg bg-gray-800/50 border border-gray-600 text-gray-300 hover:border-cyan-400 hover:text-cyan-400 hover:bg-cyan-400/5 transition-all duration-200"
             >
               {opt.label}
             </button>
