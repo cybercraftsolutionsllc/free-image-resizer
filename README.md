@@ -6,8 +6,6 @@ A free, open-source, browser-based image resizer — resize, scale, and export i
 
 > **No data leaves your browser.** All processing happens 100% client-side using the Canvas API.
 
-![Screenshot placeholder](https://via.placeholder.com/800x450?text=Screenshot+Coming+Soon)
-
 ## Features
 
 - Drag & drop or click to upload (JPG, PNG, WebP, GIF, BMP, SVG)
